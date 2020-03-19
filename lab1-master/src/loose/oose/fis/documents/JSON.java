@@ -10,16 +10,16 @@ public class JSON extends Document {
     @Override
     public String[] analizeaza() {
         String[] res = new String[continut.length];
-        int      pozz = 0;
+        int      p = 0;
 
         for (String cuvant : continut) {
             if (!cuvant.contains(":")) {
-                res[pozz] = cuvant;
-                pozz++;
+                res[p] = cuvant;
+                p++;
             }
         }
 
-        return Arrays.copyOf(res, pozz);
+        return Arrays.copyOf(res, p);
     }
 
     @Override
